@@ -1,0 +1,22 @@
+{
+    "name": "hscstudio/yii2-mimin",
+    "description": "Simple RBAC Manager",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hafid Mukhlasin",
+            "email": "hafidmukhlasin@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+		"kartik-v/yii2-widgets": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "hscstudio\\mimin\\": ""
+        }
+    }
+}
