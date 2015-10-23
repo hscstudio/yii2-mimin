@@ -45,10 +45,15 @@ in config
 ],
 'components' => [
 	'authManager' => [
-		'class' => 'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
+		'class' => 'yii\rbac\DbManager', 
 	],	
 ],
 ```
+
+Because this extension use 'yii\rbac\DbManager'as authManager, so You should migrate rbac sql first:
+
+```yii migrate --migrationPath=@yii/rbac/migrations```
+
 You can then access Auth manager through the following URL:
 
 ```
