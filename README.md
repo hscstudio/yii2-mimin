@@ -54,6 +54,8 @@ Because this extension use 'yii\rbac\DbManager'as authManager, so You should mig
 
 ```yii migrate --migrationPath=@yii/rbac/migrations```
 
+```yii migrate --migrationPath=@hscstudio/mimin```
+
 You can then access Auth manager through the following URL:
 
 ```
