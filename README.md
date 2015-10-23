@@ -49,4 +49,13 @@ in config
 	],	
 ],
 ```
+You can then access Auth manager through the following URL:
+
+```
+http://localhost/path/to/index.php?r=mimin/user
+http://localhost/path/to/index.php?r=mimin/role
+http://localhost/path/to/index.php?r=mimin/route
+```
+
+
 
