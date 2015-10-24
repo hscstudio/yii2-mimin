@@ -4,6 +4,7 @@ namespace hscstudio\mimin\components;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use hscstudio\mimin\models\AuthItem;
 
 /**
 * @author Hafid Mukhlasin <hafidmukhlasin@gmail.com>
@@ -16,7 +17,7 @@ Class Mimin extends \yii\base\Object
   /**
    * @inheritdoc
    */
-  public static function filterRouteMenu($routes)
+  public static function filterRouteMenu($routes,$strict=false)
   {
       $allowedRoutes = [];
       $user = Yii::$app->user;
@@ -24,8 +25,27 @@ Class Mimin extends \yii\base\Object
       foreach ($routes as $route) {
           $value = ArrayHelper::getValue($route, 'url');
           if(is_array($value)){
-              if ($user->can('/' . $value[0]) or $user->can($value[0])) {
+              $permision = $value[0];
+              if ($user->can('/' . $permision) or $user->can($permision)) {
                   $allowedRoutes[] = $route;
+                  continue;
+              }
+
+              if(!$strict){
+                  /*
+
+                  */
+                  $pos = (strrpos($permision, '/'));
+                  $parent = substr($permision, 1, $pos-1);
+
+                  $authItems = AuthItem::find()->where(['like','name',$parent])->all();
+                  foreach ($authItems as $authItem) {
+                      $permision = $authItem->name;
+                      if ($user->can('/' . $permision) or $user->can($permision)) {
+                          $allowedRoutes[] = $route;
+                          break;
+                      }
+                  }
               }
           }
           else {
