@@ -31,9 +31,16 @@ $this->params['breadcrumbs'][] = $this->title;
             [
               'attribute' => 'status',
               'filter' => [0 => 'off', 1 => 'on'],
+              'format' => 'raw',
               'options' => [
                 'width' => '80px',
-              ]
+              ],
+              'value' => function($data){
+                if($data==1)
+                  return "<span class='label label-primary'>".'On'."</span>";
+                else
+                  return "<span class='label label-danger'>".'Off'."</span>";
+              }
             ],
             ['class' => 'yii\grid\ActionColumn'],
         ],

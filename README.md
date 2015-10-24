@@ -31,9 +31,12 @@ in config
 ```php
 'as access' => [
      'class' => 'hscstudio\mimin\components\AccessControl',
-     'allowActions' => [
-		'site/login', 
-		'site/error'
+	 'allowActions' => [
+		// add wildcard allowed action here!
+		'site/login',
+		'site/error',
+		'debug/*',
+		'mimin/*', // only in dev mode
 	],
 ],
 ...,
@@ -54,7 +57,7 @@ Because this extension use 'yii\rbac\DbManager'as authManager, so You should mig
 
 ```yii migrate --migrationPath=@yii/rbac/migrations```
 
-```yii migrate --migrationPath=@hscstudio/mimin```
+```yii migrate --migrationPath=@hscstudio/mimin/migrations```
 
 You can then access Auth manager through the following URL:
 
