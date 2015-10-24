@@ -80,6 +80,17 @@ To define level access of user, what he superadmin?, staff?, cashier? etc. In th
 ### Route
 To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user. 
 
+### Example create dynamic menu
+```
+$items = [
+	['label' => 'Monthly', 'url' => ['/monthly/index']],
+	['label' => 'Yearly', 'url' => ['/yearly/index']],
+];
+$items = \hscstudio\mimin\components\Mimin::filterRouteMenu($items);
+if(count($items)>0){
+	$menuItems[] = ['label' => 'Reporting', 'items' => $items];
+}
+```
 
 www.HafidMukhlasin.com
 Jakarta - Indonesia
