@@ -3,6 +3,7 @@
 namespace hscstudio\mimin\components;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
 * @author Hafid Mukhlasin <hafidmukhlasin@gmail.com>
@@ -19,12 +20,20 @@ Class Mimin extends \yii\base\Object
   {
       $allowedRoutes = [];
       $user = Yii::$app->user;
+      $hr = 0;
       foreach ($routes as $route) {
-          if ($user->can('/' . $route['url']) or $user->can($route['url'])) {
+          $value = ArrayHelper::getValue($route, 'url');
+          if(is_array($value)){
+              if ($user->can('/' . $value[0]) or $user->can($value[0])) {
+                  $allowedRoutes[] = $route;
+              }
+          }
+          else {
               $allowedRoutes[] = $route;
+              $hr++;
           }
       }
-
+      if(count($allowedRoutes) == $hr) $allowedRoutes = [];
       return $allowedRoutes;
   }
 
