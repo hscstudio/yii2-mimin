@@ -71,13 +71,15 @@ http://localhost/path/to/index.php?r=mimin/user
 http://localhost/path/to/index.php?r=mimin/role
 http://localhost/path/to/index.php?r=mimin/route
 ```
-## User
+### User
 For standard user management, create/update/delete user, and assign role to user
 
-## Role
+### Role
 To define level access of user, what he superadmin?, staff?, cashier? etc. In this menu, You can assign permission / action route (actions in application, they are create, update, delete, etc) to role
 
-## Route
+### Route
 To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user. 
 
 
+www.HafidMukhlasin.com
+Jakarta - Indonesia
