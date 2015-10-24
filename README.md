@@ -33,8 +33,7 @@ in config
      'class' => 'hscstudio\mimin\components\AccessControl',
 	 'allowActions' => [
 		// add wildcard allowed action here!
-		'site/login',
-		'site/error',
+		'site/*',
 		'debug/*',
 		'mimin/*', // only in dev mode
 	],
