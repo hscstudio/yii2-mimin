@@ -48,7 +48,7 @@ in config
 'components' => [
 	'authManager' => [
 		'class' => 'yii\rbac\DbManager', // only support DbManager
-	],	
+	],
 ],
 ```
 
@@ -77,17 +77,40 @@ For standard user management, create/update/delete user, and assign role to user
 To define level access of user, what he superadmin?, staff?, cashier? etc. In this menu, You can assign permission / action route (actions in application, they are create, update, delete, etc) to role
 
 ### Route
-To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user. 
+To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user.
 
-### Example create dynamic menu
+### Example dynamic menu
 ```
+use hscstudio\mimin\components\Mimin;
 $items = [
 	['label' => 'Monthly', 'url' => ['/monthly/index']],
 	['label' => 'Yearly', 'url' => ['/yearly/index']],
 ];
-$items = \hscstudio\mimin\components\Mimin::filterRouteMenu($items);
+$items = Mimin::filterRouteMenu($items);
 if(count($items)>0){
 	$menuItems[] = ['label' => 'Reporting', 'items' => $items];
+}
+```
+### Example dynamic action column template
+```
+use hscstudio\mimin\components\Mimin;
+<?= GridView::widget([
+    'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
+    'columns' => [
+        ...,
+        [
+          'class' => 'yii\grid\ActionColumn',
+          'template' => Mimin::filterTemplateActionColumn(['update','delete','download'],$this->context->route),
+          ...
+        ]
+    ]
+]) ?>
+```
+### Example dynamic button
+```
+if (Yii::$app->user->can(Url::to(['create']))){
+    echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
 ```
 

@@ -130,7 +130,7 @@ class RouteController extends Controller
               $model->name = $route;
               $pos = (strrpos($route, '/'));
               $model->type = substr($route, 1, $pos-1);
-              $model->alias = substr($route, $pos+1, 64);;
+              $model->alias = substr($route, $pos+1, 64);
               $model->save();
             }
         }
