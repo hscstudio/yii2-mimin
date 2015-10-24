@@ -22,8 +22,8 @@ or add
 to the require section of your `composer.json` file.
 
 
-Usage
------
+Configuration
+-------------
 
 Once the extension is installed, simply use it in your code by  :
 
@@ -48,7 +48,7 @@ in config
 ],
 'components' => [
 	'authManager' => [
-		'class' => 'yii\rbac\DbManager', 
+		'class' => 'yii\rbac\DbManager', // only support DbManager
 	],	
 ],
 ```
@@ -57,7 +57,12 @@ Because this extension use 'yii\rbac\DbManager'as authManager, so You should mig
 
 ```yii migrate --migrationPath=@yii/rbac/migrations```
 
+and then migrate custom table for this extension
+
 ```yii migrate --migrationPath=@hscstudio/mimin/migrations```
+
+Usage
+-----
 
 You can then access Auth manager through the following URL:
 
@@ -66,6 +71,13 @@ http://localhost/path/to/index.php?r=mimin/user
 http://localhost/path/to/index.php?r=mimin/role
 http://localhost/path/to/index.php?r=mimin/route
 ```
+## User
+For standard user management, create/update/delete user, and assign role to user
 
+## Role
+To define level access of user, what he superadmin?, staff?, cashier? etc. In this menu, You can assign permission / action route (actions in application, they are create, update, delete, etc) to role
+
+## Route
+To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user. 
 
 
