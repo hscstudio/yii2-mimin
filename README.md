@@ -94,7 +94,7 @@ if(count($items)>0){
 ### Example dynamic action column template
 ```
 use hscstudio\mimin\components\Mimin;
-<?= GridView::widget([
+echo GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
     'columns' => [
@@ -105,11 +105,11 @@ use hscstudio\mimin\components\Mimin;
           ...
         ]
     ]
-]) ?>
+]);
 ```
 ### Example dynamic button
 ```
-if (((Mimin::filterRoute($this->context->id.'/create'))){
+if ((Mimin::filterRoute($this->context->id.'/create'))){
     echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
 ```
