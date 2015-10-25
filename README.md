@@ -109,10 +109,11 @@ use hscstudio\mimin\components\Mimin;
 ```
 ### Example dynamic button
 ```
-if (Yii::$app->user->can(Url::to(['create']))){
+if (((Mimin::filterRoute($this->context->id.'/create'))){
     echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
 ```
 
 www.HafidMukhlasin.com
+
 Jakarta - Indonesia

@@ -43,7 +43,7 @@ class Configs extends \yii\base\Object
     /**
      * @var Cache Cache component.
      */
-    public $cache = 'cache';
+    public $cache = 'null';
 
     /**
      * @var integer Cache duration. Default to a month.
