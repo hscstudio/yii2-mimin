@@ -2,6 +2,10 @@ Yii2 Mimin
 ===============
 Simple RBAC Manager fo Yii 2.0. Minify of yii2-admin extension
 
+Attention
+---------
+Before you install and use this extension, then make sure that your application has been using the login authentication to the database. especially for yii basic template. Because without it, this extension will produce error and useless.
+
 Installation
 ------------
 
@@ -30,7 +34,7 @@ Once the extension is installed, simply use it in your code by  :
 in config
 ```php
 'as access' => [
-     'class' => 'hscstudio\mimin\components\AccessControl',
+     'class' => '\hscstudio\mimin\components\AccessControl',
 	 'allowActions' => [
 		// add wildcard allowed action here!
 		'site/*',
@@ -41,7 +45,7 @@ in config
 ...,
 'modules' => [
 	'mimin' => [
-		'class' => 'hscstudio\mimin\Module',
+		'class' => '\hscstudio\mimin\Module',
 	],
 	...
 ],
@@ -56,9 +60,13 @@ Because this extension use 'yii\rbac\DbManager'as authManager, so You should mig
 
 ```yii migrate --migrationPath=@yii/rbac/migrations```
 
-and then migrate custom table for this extension
+If You use Yii 2.0.6 version or newer, so then migrate custom table for this extension
 
 ```yii migrate --migrationPath=@hscstudio/mimin/migrations```
+
+But if You install Yii 2.0.5 version or older, so then migrate custom table for this extension
+
+```yii migrate --migrationPath=@hscstudio/mimin/migrations/old```
 
 Usage
 -----

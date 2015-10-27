@@ -3,6 +3,15 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
+class m151027_142811_create_route_table extends Migration
+{
+    public function up()
+    {
+		<?php
+
+use yii\db\Schema;
+use yii\db\Migration;
+
 class m151024_072453_create_route_table extends Migration
 {
     public function up()
@@ -14,17 +23,17 @@ class m151024_072453_create_route_table extends Migration
         }
 		
 		$this->createTable('{{%route}}', [
-            'name' => $this->string(64)->primaryKey(),
-            'alias' => $this->string(64)->notNull(),
-            'type' => $this->string(64)->notNull(),
-            'status' => $this->smallInteger()->notNull()->defaultValue(1),
+			'name' => Schema::TYPE_STRING . '(64) NOT NULL',
+			'alias' => Schema::TYPE_STRING . '(64) NOT NULL',
+			'type' => Schema::TYPE_STRING . '(64) NOT NULL',
+			'status' => Schema::TYPE_SMALLINT . ' NOT NULL DEFAULT 1',
+			'PRIMARY KEY (name)'
         ]), $tableOptions);
     }
 
     public function down()
     {
-        echo "m151024_072453_create_route_table cannot be reverted.\n";
-		
+        echo "m151027_142811_create_route_table cannot be reverted.\n";
 		$this->dropTable('{{%route}}');
         return false;
     }
