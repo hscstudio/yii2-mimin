@@ -2,6 +2,9 @@ Yii2 Mimin
 ===============
 Simple RBAC Manager fo Yii 2.0. Minify of yii2-admin extension
 
+[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2/v/stable.png)](https://packagist.org/packages/hscstudio/yii2-mimin)
+[![Total Downloads](https://poser.pugx.org/yiisoft/yii2/downloads.png)](https://packagist.org/packages/hscstudio/yii2-mimin)
+
 Attention
 ---------
 Before you install and use this extension, then make sure that your application has been using the login authentication to the database. especially for yii basic template. Because without it, this extension will produce error and useless.
