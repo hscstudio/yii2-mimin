@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'width' => '80px',
               ],
               'value' => function($data){
-                if($data==1)
+                if($data->status==1)
                   return "<span class='label label-primary'>".'On'."</span>";
                 else
                   return "<span class='label label-danger'>".'Off'."</span>";
