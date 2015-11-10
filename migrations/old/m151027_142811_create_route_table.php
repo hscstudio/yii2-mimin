@@ -19,7 +19,7 @@ class m151027_142811_create_route_table extends Migration
 		'type' => Schema::TYPE_STRING . '(64) NOT NULL',
 		'status' => Schema::TYPE_SMALLINT . ' NOT NULL DEFAULT 1',
 		'PRIMARY KEY (name)'
-        ]), $tableOptions);
+        ], $tableOptions);
     }
 
     public function down()

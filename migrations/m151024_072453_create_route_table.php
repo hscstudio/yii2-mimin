@@ -18,7 +18,7 @@ class m151024_072453_create_route_table extends Migration
             'alias' => $this->string(64)->notNull(),
             'type' => $this->string(64)->notNull(),
             'status' => $this->smallInteger()->notNull()->defaultValue(1),
-        ]), $tableOptions);
+        ], $tableOptions);
     }
 
     public function down()
