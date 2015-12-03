@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
       echo "<th>Permision</th>";
     echo "<tr>";
     $auth = Yii::$app->authManager;
-	$permissions = $auth->getPermissionsByRole($model->name);	
+    $permissions = $auth->getPermissionsByRole($model->name);	
     //echo "<tbody>";
     foreach ($types as $type) {
       echo "<tr>";
