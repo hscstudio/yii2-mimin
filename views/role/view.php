@@ -54,6 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
       echo "<th>Permision</th>";
     echo "<tr>";
     $auth = Yii::$app->authManager;
+	$permissions = $auth->getPermissionsByRole($model->name);	
     //echo "<tbody>";
     foreach ($types as $type) {
       echo "<tr>";
@@ -64,15 +65,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'type' => $type->type,
       ])->all();
       foreach ($aliass as $alias) {
-          echo "<label style='display:block;width:100px;float:left;overflow:hidden;'>";
-          $permission = $auth->getPermission($alias->name);
-          $checked = false;
-          if($permission) $checked = true;
-          echo Html::checkbox($type->type.'_'.$alias->alias,$checked,[
-              'title' => $alias->name,
-              'class' => 'checkboxPermission',
-          ]).' '.$alias->alias;
-          echo "</label>";
+        echo "<label style='display:block;width:100px;float:left;overflow:hidden;'>";
+		$can = array_key_exists($alias->name,$permissions);
+		$checked = false;
+		if($can) $checked = true;
+		echo Html::checkbox($type->type.'_'.$alias->alias,$checked,[
+		  'title' => $alias->name,
+		  'class' => 'checkboxPermission',
+		]).' '.$alias->alias;
+		echo "</label>";
       }
       echo "</td>";
       echo "</tr>";
