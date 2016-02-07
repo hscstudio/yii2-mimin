@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="696d90a3-9a15-49cb-80a2-8700dd4db939" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module.php" afterPath="$PROJECT_DIR$/Module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AccessControl.php" afterPath="$PROJECT_DIR$/components/AccessControl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/Configs.php" afterPath="$PROJECT_DIR$/components/Configs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/Mimin.php" afterPath="$PROJECT_DIR$/components/Mimin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/RoleController.php" afterPath="$PROJECT_DIR$/controllers/RoleController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/RouteController.php" afterPath="$PROJECT_DIR$/controllers/RouteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/UserController.php" afterPath="$PROJECT_DIR$/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/basic/m130524_201442_init.php" afterPath="$PROJECT_DIR$/migrations/basic/m130524_201442_init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/m151024_072453_create_route_table.php" afterPath="$PROJECT_DIR$/migrations/m151024_072453_create_route_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/old/m151027_142811_create_route_table.php" afterPath="$PROJECT_DIR$/migrations/old/m151027_142811_create_route_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/AuthAssignment.php" afterPath="$PROJECT_DIR$/models/AuthAssignment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/AuthItem.php" afterPath="$PROJECT_DIR$/models/AuthItem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/AuthItemSearch.php" afterPath="$PROJECT_DIR$/models/AuthItemSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Route.php" afterPath="$PROJECT_DIR$/models/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/RouteSearch.php" afterPath="$PROJECT_DIR$/models/RouteSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User.php" afterPath="$PROJECT_DIR$/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/UserSearch.php" afterPath="$PROJECT_DIR$/models/UserSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/role/index.php" afterPath="$PROJECT_DIR$/views/role/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/role/view.php" afterPath="$PROJECT_DIR$/views/role/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/route/index.php" afterPath="$PROJECT_DIR$/views/route/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/_form.php" afterPath="$PROJECT_DIR$/views/user/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/_search.php" afterPath="$PROJECT_DIR$/views/user/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/index.php" afterPath="$PROJECT_DIR$/views/user/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/update.php" afterPath="$PROJECT_DIR$/views/user/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/view.php" afterPath="$PROJECT_DIR$/views/user/view.php" />
-    </list>
+    <list default="true" id="696d90a3-9a15-49cb-80a2-8700dd4db939" name="Default" comment="" />
     <ignored path="yii2-mimin.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -48,101 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/route/_form.php">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.3846154">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/role/update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/role/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/role/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/role/_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.384615">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/RoleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/RouteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-97.42308">
-              <caret line="158" column="49" selection-start-line="158" selection-start-column="49" selection-end-line="158" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mimin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/Mimin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9749104">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.5917667">
+              <caret line="103" column="37" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -440,7 +324,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -725,8 +609,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Mimin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9749104">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5917667">
+          <caret line="103" column="37" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
           <folding />
         </state>
       </provider>

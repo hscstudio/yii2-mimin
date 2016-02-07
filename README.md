@@ -16,13 +16,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist hscstudio/yii2-mimin "*"
+php composer.phar require --prefer-dist hscstudio/yii2-mimin "~2.0"
 ```
 
 or add
 
 ```
-"hscstudio/yii2-mimin": "*"
+"hscstudio/yii2-mimin": "~2.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -80,6 +80,8 @@ http://localhost/path/to/index.php?r=mimin/user
 http://localhost/path/to/index.php?r=mimin/role
 http://localhost/path/to/index.php?r=mimin/route
 ```
+We recommendate You for activate pretty URL.
+
 ### User
 For standard user management, create/update/delete user, and assign role to user
 
@@ -89,19 +91,52 @@ To define level access of user, what he superadmin?, staff?, cashier? etc. In th
 ### Route
 To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user.
 
-### Example dynamic menu
+Implementation on Widgets
+-------------------------
+
+### Example dynamic button
+It is used for checking if route right to access
 ```
-use hscstudio\mimin\components\Mimin;
-$items = [
-	['label' => 'Monthly', 'url' => ['/monthly/index']],
-	['label' => 'Yearly', 'url' => ['/yearly/index']],
-];
-$items = Mimin::filterRouteMenu($items);
-if(count($items)>0){
-	$menuItems[] = ['label' => 'Reporting', 'items' => $items];
+if ((Mimin::checkRoute($this->context->id.'/create'))){
+    echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
 ```
+
+### Example dynamic menu
+It is is used for filtering right access menu
+```
+use hscstudio\mimin\components\Mimin;
+$menuItems = [
+    ['label' => 'Home', 'url' => ['/site/index']],
+    ['label' => 'About', 'url' => ['/site/about']],
+    ['label' => 'Contact', 'url' => ['/site/contact']],
+];
+
+if (Yii::$app->user->isGuest){
+    $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+}
+else{
+    $menuItems[] = ['label' => 'App', 'items' => [
+        ['label' => 'Category', 'url' => ['/category/index']],
+        ['label' => 'Product', 'url' => ['/product/index']],
+        ['label' => 'Cart', 'url' => ['/cart/index']],
+    ]];
+    $menuItems[] = [
+        'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+        'url' => ['/site/logout'],
+        'linkOptions' => ['data-method' => 'post']
+    ];
+}
+
+$menuItems = Mimin::filterMenu($menuItems);
+
+echo Nav::widget([
+    'options' => ['class' => 'navbar-nav navbar-right'],
+    'items' => $menuItems,
+]);
+```
 ### Example dynamic action column template
+It is used for filtering template of Gridview Action Column
 ```
 use hscstudio\mimin\components\Mimin;
 echo GridView::widget([
@@ -111,17 +146,13 @@ echo GridView::widget([
         ...,
         [
           'class' => 'yii\grid\ActionColumn',
-          'template' => Mimin::filterTemplateActionColumn(['update','delete','download'],$this->context->route),
+          'template' => Mimin::filterActionColumn([
+              'update','delete','download'
+          ],$this->context->route),
           ...
         ]
     ]
 ]);
-```
-### Example dynamic button
-```
-if ((Mimin::filterRoute($this->context->id.'/create'))){
-    echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
-}
 ```
 
 ## How to Contribute
