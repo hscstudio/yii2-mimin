@@ -97,6 +97,7 @@ Implementation on Widgets
 ### Example dynamic button
 It is used for checking if route right to access
 ```
+use hscstudio\mimin\components\Mimin;
 if ((Mimin::checkRoute($this->context->id.'/create'))){
     echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
