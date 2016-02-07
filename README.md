@@ -73,23 +73,31 @@ But if You install Yii 2.0.5 version or older, so then migrate custom table for 
 Usage
 -----
 
-You can then access Auth manager through the following URL:
-
-```
-http://localhost/path/to/index.php?r=mimin/user
-http://localhost/path/to/index.php?r=mimin/role
-http://localhost/path/to/index.php?r=mimin/route
-```
-We recommendate You for activate pretty URL.
-
-### User
-For standard user management, create/update/delete user, and assign role to user
-
-### Role
-To define level access of user, what he superadmin?, staff?, cashier? etc. In this menu, You can assign permission / action route (actions in application, they are create, update, delete, etc) to role
+This RBAC manager have three main page, they are:
 
 ### Route
 To get all action route from application. In here, You can on / off permission so not shown in menu role, rename alias/type of action route, so easy readable by end user.
+You can then access `Route` through the following URL:
+```
+http://localhost/path/to/index.php?r=mimin/route
+```
+
+### Role
+To define level access of user, what he superadmin?, staff?, cashier? etc. In this menu, You can assign permission / action route (actions in application, they are create, update, delete, etc) to role.
+You can then access `Role` through the following URL:
+```
+http://localhost/path/to/index.php?r=mimin/role
+```
+[[screenshoot.png|alt=screenshoot]]
+
+### User
+For standard user management, create/update/delete user, and assign role to user.
+You can then access `User` through the following URL:
+```
+http://localhost/path/to/index.php?r=mimin/user
+```
+
+We recommendate you for activate pretty URL.
 
 Implementation on Widgets
 -------------------------
@@ -112,7 +120,7 @@ $menuItems = [
     ['label' => 'Contact', 'url' => ['/site/contact']],
 ];
 
-if (Yii::$app->user->isGuest){
+if (\Yii::$app->user->isGuest){
     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 }
 else{
@@ -122,7 +130,7 @@ else{
         ['label' => 'Cart', 'url' => ['/cart/index']],
     ]];
     $menuItems[] = [
-        'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+        'label' => 'Logout (' . \Yii::$app->user->identity->username . ')',
         'url' => ['/site/logout'],
         'linkOptions' => ['data-method' => 'post']
     ];
