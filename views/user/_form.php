@@ -11,30 +11,30 @@ use kartik\widgets\SwitchInput;
 
 <div class="user-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+	<?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
+	<?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+	<?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->widget(SwitchInput::classname(), [
-  		'pluginOptions' => [
-  			'onText' => 'Aktif',
-  			'offText' => 'Banned',
-  		]
-  	]) ?>
+	<?= $form->field($model, 'status')->widget(SwitchInput::classname(), [
+		'pluginOptions' => [
+			'onText' => 'Active',
+			'offText' => 'Banned',
+		]
+	]) ?>
 
-    <?php if (!$model->isNewRecord){ ?>
-      <strong> Biarkan kosong jika tidak ingin mengubah password</strong>
-      <div class="ui divider"></div>
-      <?= $form->field($model, 'new_password') ?>
-      <?= $form->field($model, 'repeat_password') ?>
-      <?= $form->field($model, 'old_password') ?>
-    <?php } ?>
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
+	<?php if (!$model->isNewRecord) { ?>
+		<strong> Leave blank if not change password</strong>
+		<div class="ui divider"></div>
+		<?= $form->field($model, 'new_password') ?>
+		<?= $form->field($model, 'repeat_password') ?>
+		<?= $form->field($model, 'old_password') ?>
+	<?php } ?>
+	<div class="form-group">
+		<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+	</div>
 
-    <?php ActiveForm::end(); ?>
+	<?php ActiveForm::end(); ?>
 
 </div>

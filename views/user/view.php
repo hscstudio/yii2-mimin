@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
     echo $form->field($authAssignment, 'item_name')->widget(Select2::classname(), [
       'data' => $authItems,
       'options' => [
-        'placeholder' => 'Pilih role ...',
+        'placeholder' => 'Select role ...',
       ],
       'pluginOptions' => [
         'allowClear' => true,

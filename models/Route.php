@@ -13,36 +13,36 @@ use Yii;
  */
 class Route extends \yii\db\ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return 'route';
-    }
+	/**
+	 * @inheritdoc
+	 */
+	public static function tableName()
+	{
+		return 'route';
+	}
 
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
-            [['name', 'alias'], 'required'],
-            [['name', 'alias', 'type'], 'string', 'max' => 64],
-            [['status'], 'integer']
-        ];
-    }
+	/**
+	 * @inheritdoc
+	 */
+	public function rules()
+	{
+		return [
+			[['name', 'alias'], 'required'],
+			[['name', 'alias', 'type'], 'string', 'max' => 64],
+			[['status'], 'integer']
+		];
+	}
 
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
-    {
-        return [
-            'name' => 'Name',
-            'alias' => 'Alias',
-            'type' => 'Type',
-            'status' => 'Status',
-        ];
-    }
+	/**
+	 * @inheritdoc
+	 */
+	public function attributeLabels()
+	{
+		return [
+			'name' => 'Name',
+			'alias' => 'Alias',
+			'type' => 'Type',
+			'status' => 'Status',
+		];
+	}
 }
