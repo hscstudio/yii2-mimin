@@ -1,6 +1,6 @@
 Yii2 Mimin
 ===============
-Simple RBAC Manager fo Yii 2.0. Minify of yii2-admin extension
+Simple RBAC Manager fo Yii 2.0. Minify of [yii2-admin](https://github.com/mdmsoft/yii2-admin) extension with awesome features
 
 [![Latest Stable Version](https://poser.pugx.org/hscstudio/yii2-mimin/v/stable)](https://packagist.org/packages/hscstudio/yii2-mimin) [![Total Downloads](https://poser.pugx.org/hscstudio/yii2-mimin/downloads)](https://packagist.org/packages/hscstudio/yii2-mimin) [![Latest Unstable Version](https://poser.pugx.org/hscstudio/yii2-mimin/v/unstable)](https://packagist.org/packages/hscstudio/yii2-mimin) [![License](https://poser.pugx.org/hscstudio/yii2-mimin/license)](https://packagist.org/packages/hscstudio/yii2-mimin)
 
