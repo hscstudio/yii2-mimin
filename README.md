@@ -88,7 +88,8 @@ You can then access `Role` through the following URL:
 ```
 http://localhost/path/to/index.php?r=mimin/role
 ```
-[[screenshoot.png|alt=screenshoot]]
+Below screenshoot of route assignment to role
+![Screenshoot Role](screenshoot.png "Screenshoot Role")
 
 ### User
 For standard user management, create/update/delete user, and assign role to user.
