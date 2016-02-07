@@ -96,8 +96,7 @@ Implementation on Widgets
 
 ### Example dynamic button
 It is used for checking if route right to access
-```
-use hscstudio\mimin\components\Mimin;
+```php
 if ((Mimin::checkRoute($this->context->id.'/create'))){
     echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
@@ -105,7 +104,7 @@ if ((Mimin::checkRoute($this->context->id.'/create'))){
 
 ### Example dynamic menu
 It is is used for filtering right access menu
-```
+```php
 use hscstudio\mimin\components\Mimin;
 $menuItems = [
     ['label' => 'Home', 'url' => ['/site/index']],
@@ -138,7 +137,7 @@ echo Nav::widget([
 ```
 ### Example dynamic action column template
 It is used for filtering template of Gridview Action Column
-```
+```php
 use hscstudio\mimin\components\Mimin;
 echo GridView::widget([
     'dataProvider' => $dataProvider,
