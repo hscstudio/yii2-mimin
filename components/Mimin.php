@@ -34,7 +34,7 @@ Class Mimin extends \yii\base\Object
 		if (!$strict) {
 			$pos = (strrpos($permission, '/'));
 			$parent = substr($permission, 0, $pos);
-			$authItems = AuthItem::find()->where(['like', 'name', $parent])->all();
+			$authItems = AuthItem::find()->where('name LIKE :param')->addParams([':param' => $parent.'%'])->all();
 			foreach ($authItems as $authItem) {
 				$permission = $authItem->name;
 				if ($user->can($permission)) {
