@@ -47,7 +47,8 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
     <?php
-    $types = Route::find()->where(['status' => 1])->groupBy('type')->all();
+    //$types = Route::find()->where(['status' => 1])->groupBy('type')->all();
+    $types = Route::find()->distinct('type')->where(['status' => 1])->all();
     echo "<table id='permissionTable' class='table table-condensed table-striped table-hover table-bordered'>";
     echo "<tr>";
       echo "<th>Type</th>";
