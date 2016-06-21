@@ -185,3 +185,8 @@ We'd like to thank our [contributors](https://github.com/hscstudio/yii2-mimin/gr
 this tools. Thank you!
 
 Jakarta - Indonesia
+
+## Buku Panduan
+
+Tutorial tentang dasar-dasar RBAC atau access controll di Yii 2 dan panduan yii2-mimin dibahas secara komprehensif di buku saya ini
+https://hscstudio.github.io/yii2-book-id
