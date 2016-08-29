@@ -47,8 +47,8 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
     <?php
-    //$types = Route::find()->where(['status' => 1])->groupBy('type')->all();
-    $types = Route::find()->distinct('type')->where(['status' => 1])->all();
+   
+   $types = Route::find()->select('type')->distinct()->where(['status' => 1])->all();
     echo "<table id='permissionTable' class='table table-condensed table-striped table-hover table-bordered'>";
     echo "<tr>";
       echo "<th>Type</th>";
@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
     echo "<tr>";
     $auth = Yii::$app->authManager;
     $permissions = $auth->getPermissionsByRole($model->name);	
-    //echo "<tbody>";
+   
     foreach ($types as $type) {
       echo "<tr>";
       echo "<th>".$type->type."</th>";

@@ -50,6 +50,7 @@ class User extends \yii\db\ActiveRecord
 			[['username', 'email', 'password_hash'], 'string', 'max' => 255],
 			[['username', 'email'], 'unique'],
 			[['email'], 'email'],
+			['status','integer'],
 			[['old_password', 'new_password', 'repeat_password'], 'string', 'min' => 6],
 			[['repeat_password'], 'compare', 'compareAttribute' => 'new_password'],
 			[['old_password', 'new_password', 'repeat_password'], 'required', 'when' => function ($model) {
