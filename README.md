@@ -16,13 +16,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist hscstudio/yii2-mimin "~1.1.2"
+php composer.phar require --prefer-dist hscstudio/yii2-mimin "~1.1.3"
 ```
 
 or add
 
 ```
-"hscstudio/yii2-mimin": "~1.1.2"
+"hscstudio/yii2-mimin": "~1.1.3"
 ```
 
 to the require section of your `composer.json` file.
@@ -109,6 +109,9 @@ It is used for checking if route right to access
 if ((Mimin::checkRoute($this->context->id.'/create'))){
     echo Html::a('Create Note', ['create'], ['class' => 'btn btn-success']);
 }
+
+// in other case maybe You want ensure same of route so You can add parameter strict true
+if ((Mimin::checkRoute($this->context->id.'/create',true))){
 ```
 
 ### Example dynamic menu
@@ -138,6 +141,8 @@ else{
 }
 
 $menuItems = Mimin::filterMenu($menuItems);
+// in other case maybe You want ensure same of route so You can add parameter strict true
+// $menuItems = Mimin::filterMenu($menuItems,true); 
 
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
