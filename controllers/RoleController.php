@@ -162,7 +162,7 @@ class RoleController extends Controller
 
 			if ($auth->hasChild($role, $permission)) {
 				$auth->removeChild($role, $permission);
-				$auth->remove($permission);
+				//$auth->remove($permission);
 				$msg = 'permission removed';
 			} else {
 				$auth->addChild($role, $permission);
