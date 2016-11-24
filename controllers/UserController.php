@@ -144,15 +144,13 @@ class UserController extends Controller
 
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
 			if (!empty($model->new_password)) {
-				if ($model->validatePassword($model->new_password)) {
-					$model->setPassword($model->new_password);
-				}
+			    $model->setPassword($model->new_password);
 			}
 			$model->status = $model->status==1?10:0;
 			if ($model->save()) {
-				Yii::$app->session->setFlash('success', 'User berhasil diupdate');
+			    Yii::$app->session->setFlash('success', 'User berhasil diupdate');
 			} else {
-				Yii::$app->session->setFlash('error', 'User gagal diupdate');
+			    Yii::$app->session->setFlash('error', 'User gagal diupdate');
 			}
 			return $this->redirect(['view', 'id' => $model->id]);
 		} else {
