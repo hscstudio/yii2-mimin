@@ -16,13 +16,19 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist hscstudio/yii2-mimin "~1.1.3"
+php composer.phar require --prefer-dist hscstudio/yii2-mimin "~1.1.4"
 ```
 
 or add
 
 ```
-"hscstudio/yii2-mimin": "~1.1.3"
+"hscstudio/yii2-mimin": "~1.1.4"
+```
+
+or add this for install last change
+
+```
+"hscstudio/yii2-mimin": "~1.*"
 ```
 
 to the require section of your `composer.json` file.
