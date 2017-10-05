@@ -28,7 +28,7 @@ class AuthItem extends \yii\db\ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'auth_item';
+		return '{{%auth_item}}';
 	}
 
 	/**
