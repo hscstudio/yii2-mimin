@@ -114,7 +114,6 @@ Class Mimin extends \yii\base\Object
 						$permission = $urls[0];
 						$allowed = self::checkRoute($permission, $strict);
 						if ($allowed) {
-						    print_r($item);
 							$allowedSubRoutes[] = $item;
 							continue;
 						}
