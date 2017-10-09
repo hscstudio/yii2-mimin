@@ -18,7 +18,7 @@ class Route extends \yii\db\ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'route';
+		return '{{%route}}';
 	}
 
 	/**
