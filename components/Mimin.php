@@ -10,7 +10,7 @@ use hscstudio\mimin\models\AuthItem;
  * @author Hafid Mukhlasin <hafidmukhlasin@gmail.com>
  * @since 1.0
  */
-Class Mimin extends \yii\base\Object
+Class Mimin extends \yii\base\BaseObject
 {
 
     private static $_cachePathCheck = [];
