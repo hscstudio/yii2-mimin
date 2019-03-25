@@ -24,7 +24,6 @@ class m151027_142811_create_route_table extends Migration
 
 	public function down()
 	{
-		echo "m151027_142811_create_route_table cannot be reverted.\n";
 		$this->dropTable('{{%route}}');
 		return false;
 	}
